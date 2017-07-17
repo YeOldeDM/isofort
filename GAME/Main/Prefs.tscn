@@ -1,0 +1,295 @@
+[gd_scene load_steps=3 format=1]
+
+[ext_resource path="res://themes/Vert.tres" type="Theme" id=1]
+[ext_resource path="res://Main/Prefs.gd" type="Script" id=2]
+
+[node name="Prefs" type="PopupPanel"]
+
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+theme/theme = ExtResource( 1 )
+margin/left = 64.0
+margin/top = 8.0
+margin/right = 64.0
+margin/bottom = 8.0
+popup/exclusive = true
+script/script = ExtResource( 2 )
+
+[node name="box" type="VBoxContainer" parent="."]
+
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 4.0
+margin/top = 4.0
+margin/right = 4.0
+margin/bottom = 4.0
+alignment = 0
+
+[node name="Panel" type="Panel" parent="box"]
+
+rect/min_size = Vector2( 0, 16 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 376.0
+margin/bottom = 16.0
+
+[node name="Label" type="Label" parent="box/Panel"]
+
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 0.0
+margin/bottom = 0.0
+text = "OPTIONS"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Tabs" type="TabContainer" parent="box"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 3
+size_flags/vertical = 3
+margin/left = 0.0
+margin/top = 20.0
+margin/right = 376.0
+margin/bottom = 306.0
+tab_align = 1
+tabs_visible = true
+
+[node name="Video" type="GridContainer" parent="box/Tabs"]
+
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 3
+size_flags/vertical = 3
+margin/left = 8.0
+margin/top = 24.0
+margin/right = 8.0
+margin/bottom = 8.0
+columns = 2
+
+[node name="BloomEnable" type="CheckBox" parent="box/Tabs/Video"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 3
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 127.0
+margin/bottom = 17.0
+toggle_mode = true
+enabled_focus_mode = 2
+shortcut = null
+text = "Bloom"
+flat = false
+align = 0
+
+[node name="BloomStrength" type="HBoxContainer" parent="box/Tabs/Video"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 3
+size_flags/vertical = 2
+margin/left = 131.0
+margin/top = 0.0
+margin/right = 360.0
+margin/bottom = 17.0
+alignment = 0
+
+[node name="Label" type="Label" parent="box/Tabs/Video/BloomStrength"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 3
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 4.0
+margin/right = 161.0
+margin/bottom = 12.0
+text = "Bloom Strength"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Items" type="OptionButton" parent="box/Tabs/Video/BloomStrength"]
+
+rect/min_size = Vector2( 64, 0 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 0
+size_flags/vertical = 2
+margin/left = 165.0
+margin/top = 0.0
+margin/right = 229.0
+margin/bottom = 17.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "low"
+flat = false
+align = 0
+selected = 0
+items = [ "low", null, false, 0, null, "medium", null, false, 1, null, "high", null, false, 2, null ]
+
+[node name="FXAAEnable" type="CheckBox" parent="box/Tabs/Video"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 3
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 21.0
+margin/right = 127.0
+margin/bottom = 38.0
+toggle_mode = true
+enabled_focus_mode = 2
+shortcut = null
+text = "Anti-Aliasing"
+flat = false
+align = 0
+
+[node name="VideoMode" type="HBoxContainer" parent="box/Tabs/Video"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 3
+size_flags/vertical = 2
+margin/left = 131.0
+margin/top = 21.0
+margin/right = 360.0
+margin/bottom = 38.0
+alignment = 0
+
+[node name="Label" type="Label" parent="box/Tabs/Video/VideoMode"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 3
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 4.0
+margin/right = 97.0
+margin/bottom = 12.0
+text = "Video Mode"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Items" type="OptionButton" parent="box/Tabs/Video/VideoMode"]
+
+rect/min_size = Vector2( 128, 0 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 0
+size_flags/vertical = 2
+margin/left = 101.0
+margin/top = 0.0
+margin/right = 229.0
+margin/bottom = 17.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Windowed"
+flat = false
+align = 0
+selected = 0
+items = [ "Windowed", null, false, 0, null, "Borderless Window", null, false, 1, null, "Fullscreen", null, false, 2, null ]
+
+[node name="Actions" type="HBoxContainer" parent="box"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 310.0
+margin/right = 376.0
+margin/bottom = 326.0
+alignment = 1
+
+[node name="Cancel" type="Button" parent="box/Actions"]
+
+rect/min_size = Vector2( 64, 0 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 1
+size_flags/vertical = 2
+margin/left = 29.0
+margin/top = 0.0
+margin/right = 93.0
+margin/bottom = 16.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Cancel"
+flat = false
+
+[node name="Apply" type="Button" parent="box/Actions"]
+
+rect/min_size = Vector2( 64, 0 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 1
+size_flags/vertical = 2
+margin/left = 155.0
+margin/top = 0.0
+margin/right = 219.0
+margin/bottom = 16.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Apply"
+flat = false
+
+[node name="OK" type="Button" parent="box/Actions"]
+
+rect/min_size = Vector2( 64, 0 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 1
+size_flags/vertical = 2
+margin/left = 282.0
+margin/top = 0.0
+margin/right = 346.0
+margin/bottom = 16.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "OK"
+flat = false
+
+[connection signal="about_to_show" from="." to="." method="_on_Prefs_about_to_show"]
+
+[connection signal="pressed" from="box/Actions/Cancel" to="." method="_on_Cancel_pressed"]
+
+[connection signal="pressed" from="box/Actions/Apply" to="." method="_on_Apply_pressed"]
+
+[connection signal="pressed" from="box/Actions/OK" to="." method="_on_OK_pressed"]
+
+

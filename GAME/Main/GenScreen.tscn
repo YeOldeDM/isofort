@@ -1,0 +1,91 @@
+[gd_scene load_steps=4 format=1]
+
+[ext_resource path="res://assets/graphics/style/panel_ver.png" type="Texture" id=1]
+[ext_resource path="res://Main/GenScreen.gd" type="Script" id=2]
+
+[sub_resource type="StyleBoxTexture" id=1]
+
+content_margin/left = 4.0
+content_margin/right = 4.0
+content_margin/top = 4.0
+content_margin/bottom = 4.0
+texture = ExtResource( 1 )
+margin/left = 8.0
+margin/right = 8.0
+margin/top = 8.0
+margin/bottom = 8.0
+expand_margin/left = 0.0
+expand_margin/right = 0.0
+expand_margin/top = 0.0
+expand_margin/bottom = 0.0
+draw_center = true
+
+[node name="GenScreen" type="PopupPanel"]
+
+anchor/top = 3
+anchor/right = 1
+anchor/bottom = 3
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 127.0
+margin/top = 56.0
+margin/right = 161.0
+margin/bottom = -11.0
+custom_styles/panel = SubResource( 1 )
+popup/exclusive = true
+script/script = ExtResource( 2 )
+
+[node name="box" type="VBoxContainer" parent="."]
+
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 4.0
+margin/top = 4.0
+margin/right = 4.0
+margin/bottom = 4.0
+alignment = 1
+
+[node name="title" type="Label" parent="box"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 12.0
+margin/right = 216.0
+margin/bottom = 26.0
+text = "Generating Map..."
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="bar" type="ProgressBar" parent="box"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 3
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 30.0
+margin/right = 216.0
+margin/bottom = 46.0
+range/min = 0.0
+range/max = 20.0
+range/step = 1.0
+range/page = 0.0
+range/value = 0.0
+range/exp_edit = false
+range/rounded = false
+percent/visible = true
+
+[connection signal="about_to_show" from="." to="." method="_on_GenScreen_about_to_show"]
+
+

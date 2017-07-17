@@ -1,0 +1,110 @@
+[gd_scene load_steps=3 format=1]
+
+[ext_resource path="res://themes/Vert.tres" type="Theme" id=1]
+[ext_resource path="res://Main/LevelControl.gd" type="Script" id=2]
+
+[node name="LevelControl" type="PanelContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+theme/theme = ExtResource( 1 )
+margin/left = 356.0
+margin/top = 156.0
+margin/right = 464.0
+margin/bottom = 197.0
+script/script = ExtResource( 2 )
+
+[node name="box" type="HBoxContainer" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 3
+size_flags/vertical = 3
+margin/left = 4.0
+margin/top = 4.0
+margin/right = 104.0
+margin/bottom = 37.0
+alignment = 0
+
+[node name="label" type="Panel" parent="box"]
+
+rect/min_size = Vector2( 64, 0 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 3
+size_flags/vertical = 3
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 64.0
+margin/bottom = 33.0
+
+[node name="value" type="Label" parent="box/label"]
+
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 3
+size_flags/vertical = 3
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 0.0
+margin/bottom = 0.0
+text = "0"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="buttons" type="VBoxContainer" parent="box"]
+
+rect/min_size = Vector2( 32, 0 )
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 68.0
+margin/top = 0.0
+margin/right = 100.0
+margin/bottom = 33.0
+custom_constants/separation = 1
+alignment = 0
+
+[node name="Up" type="Button" parent="box/buttons"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 32.0
+margin/bottom = 16.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+flat = false
+
+[node name="Down" type="Button" parent="box/buttons"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 17.0
+margin/right = 32.0
+margin/bottom = 33.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+flat = false
+
+[connection signal="pressed" from="box/buttons/Up" to="." method="_on_button_pressed" binds= [ 1 ]]
+
+[connection signal="pressed" from="box/buttons/Down" to="." method="_on_button_pressed" binds= [ -1 ]]
+
+

@@ -1,0 +1,546 @@
+[gd_scene load_steps=2 format=1]
+
+[ext_resource path="res://themes/Vert.tres" type="Theme" id=1]
+
+[node name="NewWorld" type="Control"]
+
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 0.0
+margin/bottom = 0.0
+
+[node name="panel" type="PanelContainer" parent="."]
+
+anchor/left = 3
+anchor/top = 3
+anchor/right = 3
+anchor/bottom = 3
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+theme/theme = ExtResource( 1 )
+margin/left = 163.0
+margin/top = 139.0
+margin/right = -128.0
+margin/bottom = -129.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="panel"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 4.0
+margin/top = 4.0
+margin/right = 287.0
+margin/bottom = 264.0
+alignment = 0
+
+[node name="Title" type="Label" parent="panel/VBoxContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 3
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 283.0
+margin/bottom = 8.0
+custom_colors/font_color = Color( 0.879763, 0.902344, 0.179764, 1 )
+custom_colors/font_color_shadow = Color( 0.285156, 0.249059, 0.0133667, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_constants/shadow_as_outline = 1
+text = "World Creation"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="HSeparator" type="HSeparator" parent="panel/VBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 12.0
+margin/right = 283.0
+margin/bottom = 15.0
+
+[node name="Params" type="VBoxContainer" parent="panel/VBoxContainer"]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 3
+size_flags/vertical = 3
+margin/left = 0.0
+margin/top = 19.0
+margin/right = 283.0
+margin/bottom = 240.0
+custom_constants/separation = -1
+alignment = 2
+
+[node name="Seed" type="PanelContainer" parent="panel/VBoxContainer/Params"]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 3
+size_flags/vertical = 1
+margin/left = 0.0
+margin/top = 10.0
+margin/right = 283.0
+margin/bottom = 46.0
+
+[node name="box" type="VBoxContainer" parent="panel/VBoxContainer/Params/Seed"]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 3
+size_flags/vertical = 3
+margin/left = 4.0
+margin/top = 4.0
+margin/right = 279.0
+margin/bottom = 32.0
+alignment = 1
+
+[node name="Label" type="Label" parent="panel/VBoxContainer/Params/Seed/box"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 275.0
+margin/bottom = 8.0
+text = "Seed"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="panel/VBoxContainer/Params/Seed/box"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 12.0
+margin/right = 275.0
+margin/bottom = 28.0
+alignment = 1
+
+[node name="Input" type="SpinBox" parent="panel/VBoxContainer/Params/Seed/box/HBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 3
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 248.0
+margin/bottom = 16.0
+range/min = -1.67772e+07
+range/max = 108.0
+range/step = 1.0
+range/page = 0.0
+range/value = 108.0
+range/exp_edit = false
+range/rounded = false
+editable = true
+prefix = ""
+suffix = ""
+
+[node name="Button" type="Button" parent="panel/VBoxContainer/Params/Seed/box/HBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 252.0
+margin/top = 0.0
+margin/right = 275.0
+margin/bottom = 16.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "RND"
+flat = false
+
+[node name="Size" type="PanelContainer" parent="panel/VBoxContainer/Params"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 1
+margin/left = 0.0
+margin/top = 65.0
+margin/right = 283.0
+margin/bottom = 101.0
+
+[node name="box" type="VBoxContainer" parent="panel/VBoxContainer/Params/Size"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 3
+size_flags/vertical = 3
+margin/left = 4.0
+margin/top = 4.0
+margin/right = 279.0
+margin/bottom = 32.0
+alignment = 0
+
+[node name="Label" type="Label" parent="panel/VBoxContainer/Params/Size/box"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 275.0
+margin/bottom = 8.0
+text = "Map Dimensions"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="panel/VBoxContainer/Params/Size/box"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 12.0
+margin/right = 275.0
+margin/bottom = 28.0
+alignment = 1
+
+[node name="Xinput" type="SpinBox" parent="panel/VBoxContainer/Params/Size/box/HBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 0
+size_flags/vertical = 0
+margin/left = 63.0
+margin/top = 0.0
+margin/right = 135.0
+margin/bottom = 16.0
+range/min = 16.0
+range/max = 64.0
+range/step = 1.0
+range/page = 0.0
+range/value = 64.0
+range/exp_edit = false
+range/rounded = true
+editable = true
+prefix = "x"
+suffix = ""
+
+[node name="Yinput1" type="SpinBox" parent="panel/VBoxContainer/Params/Size/box/HBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 0
+size_flags/vertical = 0
+margin/left = 139.0
+margin/top = 0.0
+margin/right = 211.0
+margin/bottom = 16.0
+range/min = 16.0
+range/max = 64.0
+range/step = 1.0
+range/page = 0.0
+range/value = 64.0
+range/exp_edit = false
+range/rounded = true
+editable = true
+prefix = "y"
+suffix = ""
+
+[node name="Depth" type="PanelContainer" parent="panel/VBoxContainer/Params"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 1
+margin/left = 0.0
+margin/top = 120.0
+margin/right = 283.0
+margin/bottom = 156.0
+
+[node name="box" type="VBoxContainer" parent="panel/VBoxContainer/Params/Depth"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 3
+size_flags/vertical = 3
+margin/left = 4.0
+margin/top = 4.0
+margin/right = 279.0
+margin/bottom = 32.0
+alignment = 0
+
+[node name="Label" type="Label" parent="panel/VBoxContainer/Params/Depth/box"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 275.0
+margin/bottom = 8.0
+text = "Map Depth/Height"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="panel/VBoxContainer/Params/Depth/box"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 12.0
+margin/right = 275.0
+margin/bottom = 28.0
+alignment = 1
+
+[node name="Dinput" type="SpinBox" parent="panel/VBoxContainer/Params/Depth/box/HBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 1
+size_flags/vertical = 0
+margin/left = 8.0
+margin/top = 0.0
+margin/right = 80.0
+margin/bottom = 16.0
+range/min = 5.0
+range/max = 10.0
+range/step = 1.0
+range/page = 0.0
+range/value = 10.0
+range/exp_edit = false
+range/rounded = true
+editable = true
+prefix = "depth"
+suffix = ""
+
+[node name="Hinput" type="SpinBox" parent="panel/VBoxContainer/Params/Depth/box/HBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 1
+size_flags/vertical = 0
+margin/left = 101.0
+margin/top = 0.0
+margin/right = 173.0
+margin/bottom = 16.0
+range/min = 5.0
+range/max = 10.0
+range/step = 1.0
+range/page = 0.0
+range/value = 10.0
+range/exp_edit = false
+range/rounded = true
+editable = true
+prefix = "height"
+suffix = ""
+
+[node name="DirtInput" type="SpinBox" parent="panel/VBoxContainer/Params/Depth/box/HBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 3
+size_flags/vertical = 0
+margin/left = 186.0
+margin/top = 0.0
+margin/right = 275.0
+margin/bottom = 16.0
+range/min = 0.0
+range/max = 3.0
+range/step = 1.0
+range/page = 0.0
+range/value = 3.0
+range/exp_edit = false
+range/rounded = true
+editable = true
+prefix = "dirt depth"
+suffix = ""
+
+[node name="Name" type="PanelContainer" parent="panel/VBoxContainer/Params"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 1
+margin/left = 0.0
+margin/top = 175.0
+margin/right = 283.0
+margin/bottom = 211.0
+
+[node name="box" type="HBoxContainer" parent="panel/VBoxContainer/Params/Name"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 3
+size_flags/vertical = 3
+margin/left = 4.0
+margin/top = 4.0
+margin/right = 279.0
+margin/bottom = 32.0
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="panel/VBoxContainer/Params/Name/box"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 3
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 275.0
+margin/bottom = 28.0
+alignment = 0
+
+[node name="Label" type="Label" parent="panel/VBoxContainer/Params/Name/box/VBoxContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 275.0
+margin/bottom = 8.0
+text = "World Name"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="panel/VBoxContainer/Params/Name/box/VBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 12.0
+margin/right = 275.0
+margin/bottom = 28.0
+alignment = 0
+
+[node name="LineEdit" type="LineEdit" parent="panel/VBoxContainer/Params/Name/box/VBoxContainer/HBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 3
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 248.0
+margin/bottom = 16.0
+text = "New World"
+placeholder/alpha = 0.6
+focus_mode = 2
+caret/caret_blink = false
+caret/caret_blink_speed = 0.65
+
+[node name="Button" type="Button" parent="panel/VBoxContainer/Params/Name/box/VBoxContainer/HBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 252.0
+margin/top = 0.0
+margin/right = 275.0
+margin/bottom = 16.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "RND"
+flat = false
+
+[node name="Actions" type="HBoxContainer" parent="panel/VBoxContainer"]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 244.0
+margin/right = 283.0
+margin/bottom = 260.0
+alignment = 1
+
+[node name="Back" type="Button" parent="panel/VBoxContainer/Actions"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 1
+size_flags/vertical = 2
+margin/left = 20.0
+margin/top = 0.0
+margin/right = 71.0
+margin/bottom = 16.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "<-Go Back!"
+flat = false
+
+[node name="Reset" type="Button" parent="panel/VBoxContainer/Actions"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 1
+size_flags/vertical = 2
+margin/left = 123.0
+margin/top = 0.0
+margin/right = 157.0
+margin/bottom = 16.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Reset!"
+flat = false
+
+[node name="Generate" type="Button" parent="panel/VBoxContainer/Actions"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 1
+size_flags/vertical = 2
+margin/left = 212.0
+margin/top = 0.0
+margin/right = 260.0
+margin/bottom = 16.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Generate!"
+flat = false
+
+

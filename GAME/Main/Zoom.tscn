@@ -1,0 +1,50 @@
+[gd_scene load_steps=3 format=1]
+
+[ext_resource path="res://themes/Vert.tres" type="Theme" id=1]
+[ext_resource path="res://Main/Zoom.gd" type="Script" id=2]
+
+[node name="Zoom" type="PanelContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+theme/theme = ExtResource( 1 )
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 151.0
+margin/bottom = 37.0
+script/script = ExtResource( 2 )
+
+[node name="box" type="HBoxContainer" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 3
+size_flags/vertical = 3
+margin/left = 4.0
+margin/top = 4.0
+margin/right = 147.0
+margin/bottom = 33.0
+alignment = 0
+
+[node name="OptionButton" type="MenuButton" parent="box"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 3
+size_flags/vertical = 3
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 143.0
+margin/bottom = 29.0
+toggle_mode = false
+click_on_press = true
+enabled_focus_mode = 2
+shortcut = null
+text = "Zoom"
+flat = false
+align = 0
+items = [ "Zoom 1x", null, false, false, false, 0, 0, null, "", false, "Zoom 2x", null, false, false, false, 1, 0, null, "", false, "Zoom 3x", null, false, false, false, 2, 0, null, "", false, "Zoom 4x", null, false, false, false, 3, 0, null, "", false ]
+
+

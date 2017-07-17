@@ -1,0 +1,327 @@
+[gd_resource type="Theme" load_steps=38 format=1]
+
+[ext_resource path="res://assets/graphics/style/button_disabled_ver.png" type="Texture" id=1]
+[ext_resource path="res://themes/style/Vert_button_hover.tres" type="StyleBox" id=2]
+[ext_resource path="res://themes/style/Vert_button_normal.tres" type="StyleBox" id=3]
+[ext_resource path="res://themes/style/Vert_button_pressed.tres" type="StyleBox" id=4]
+[ext_resource path="res://assets/graphics/icon/checkbox_checked.png" type="Texture" id=5]
+[ext_resource path="res://assets/graphics/icon/checkbox.png" type="Texture" id=6]
+[ext_resource path="res://assets/graphics/style/panel_inv_ver.png" type="Texture" id=7]
+[ext_resource path="res://assets/graphics/style/panel_ver.png" type="Texture" id=8]
+[ext_resource path="res://assets/graphics/style/panel_blu.png" type="Texture" id=9]
+[ext_resource path="res://themes/style/Vert_panel_out.tres" type="StyleBox" id=10]
+[ext_resource path="res://assets/graphics/style/round_inv_ver.png" type="Texture" id=11]
+[ext_resource path="res://assets/graphics/style/round_ver.png" type="Texture" id=12]
+[ext_resource path="res://assets/graphics/style/icon_updown_ver.png" type="Texture" id=13]
+[ext_resource path="res://themes/style/Vert_panel_in.tres" type="StyleBox" id=14]
+[ext_resource path="res://assets/fonts/04B_03__.TTF" type="DynamicFontData" id=15]
+[ext_resource path="res://assets/graphics/icon/close.png" type="Texture" id=16]
+[ext_resource path="res://assets/graphics/icon/close_hilite.png" type="Texture" id=17]
+[ext_resource path="res://assets/graphics/style/window_panel_ver.png" type="Texture" id=18]
+
+[sub_resource type="StyleBoxTexture" id=1]
+
+content_margin/left = 4.0
+content_margin/right = 4.0
+content_margin/top = 4.0
+content_margin/bottom = 4.0
+texture = ExtResource( 1 )
+margin/left = 8.0
+margin/right = 8.0
+margin/top = 8.0
+margin/bottom = 8.0
+expand_margin/left = 0.0
+expand_margin/right = 0.0
+expand_margin/top = 0.0
+expand_margin/bottom = 0.0
+draw_center = true
+
+[sub_resource type="StyleBoxEmpty" id=2]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+
+[sub_resource type="StyleBoxEmpty" id=3]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+
+[sub_resource type="StyleBoxTexture" id=4]
+
+content_margin/left = 4.0
+content_margin/right = 4.0
+content_margin/top = 4.0
+content_margin/bottom = 4.0
+texture = ExtResource( 7 )
+margin/left = 8.0
+margin/right = 8.0
+margin/top = 8.0
+margin/bottom = 8.0
+expand_margin/left = 0.0
+expand_margin/right = 0.0
+expand_margin/top = 0.0
+expand_margin/bottom = 0.0
+draw_center = true
+
+[sub_resource type="StyleBoxEmpty" id=5]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+
+[sub_resource type="StyleBoxEmpty" id=6]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+
+[sub_resource type="StyleBoxTexture" id=7]
+
+content_margin/left = 4.0
+content_margin/right = 4.0
+content_margin/top = 4.0
+content_margin/bottom = 4.0
+texture = ExtResource( 7 )
+margin/left = 8.0
+margin/right = 8.0
+margin/top = 8.0
+margin/bottom = 8.0
+expand_margin/left = 0.0
+expand_margin/right = 0.0
+expand_margin/top = 0.0
+expand_margin/bottom = 0.0
+draw_center = true
+
+[sub_resource type="StyleBoxTexture" id=8]
+
+content_margin/left = 4.0
+content_margin/right = 4.0
+content_margin/top = 4.0
+content_margin/bottom = 4.0
+texture = ExtResource( 8 )
+margin/left = 8.0
+margin/right = 8.0
+margin/top = 8.0
+margin/bottom = 8.0
+expand_margin/left = 0.0
+expand_margin/right = 0.0
+expand_margin/top = 0.0
+expand_margin/bottom = 0.0
+draw_center = true
+
+[sub_resource type="StyleBoxTexture" id=9]
+
+content_margin/left = 0.0
+content_margin/right = 0.0
+content_margin/top = 0.0
+content_margin/bottom = 0.0
+texture = ExtResource( 9 )
+margin/left = 4.0
+margin/right = 4.0
+margin/top = 4.0
+margin/bottom = 4.0
+expand_margin/left = 0.0
+expand_margin/right = 0.0
+expand_margin/top = 0.0
+expand_margin/bottom = 0.0
+draw_center = true
+
+[sub_resource type="StyleBoxTexture" id=10]
+
+content_margin/left = 4.0
+content_margin/right = 4.0
+content_margin/top = 4.0
+content_margin/bottom = 4.0
+texture = ExtResource( 9 )
+margin/left = 4.0
+margin/right = 4.0
+margin/top = 4.0
+margin/bottom = 4.0
+expand_margin/left = 4.0
+expand_margin/right = 4.0
+expand_margin/top = 4.0
+expand_margin/bottom = 4.0
+draw_center = true
+
+[sub_resource type="StyleBoxTexture" id=11]
+
+content_margin/left = 0.0
+content_margin/right = 0.0
+content_margin/top = 0.0
+content_margin/bottom = 0.0
+texture = ExtResource( 11 )
+margin/left = 8.0
+margin/right = 8.0
+margin/top = 8.0
+margin/bottom = 8.0
+expand_margin/left = 0.0
+expand_margin/right = 0.0
+expand_margin/top = 0.0
+expand_margin/bottom = 0.0
+draw_center = true
+
+[sub_resource type="StyleBoxTexture" id=12]
+
+content_margin/left = 0.0
+content_margin/right = 0.0
+content_margin/top = 0.0
+content_margin/bottom = 0.0
+texture = ExtResource( 12 )
+margin/left = 8.0
+margin/right = 8.0
+margin/top = 8.0
+margin/bottom = 8.0
+expand_margin/left = 0.0
+expand_margin/right = 0.0
+expand_margin/top = 0.0
+expand_margin/bottom = 0.0
+draw_center = true
+
+[sub_resource type="StyleBoxEmpty" id=13]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+
+[sub_resource type="StyleBoxTexture" id=14]
+
+content_margin/left = 0.0
+content_margin/right = 0.0
+content_margin/top = 0.0
+content_margin/bottom = 0.0
+texture = ExtResource( 12 )
+margin/left = 8.0
+margin/right = 8.0
+margin/top = 8.0
+margin/bottom = 8.0
+expand_margin/left = 0.0
+expand_margin/right = 0.0
+expand_margin/top = 0.0
+expand_margin/bottom = 0.0
+draw_center = true
+
+[sub_resource type="StyleBoxTexture" id=15]
+
+content_margin/left = 0.0
+content_margin/right = 0.0
+content_margin/top = 0.0
+content_margin/bottom = 0.0
+texture = ExtResource( 12 )
+margin/left = 8.0
+margin/right = 8.0
+margin/top = 8.0
+margin/bottom = 8.0
+expand_margin/left = 0.0
+expand_margin/right = 0.0
+expand_margin/top = 0.0
+expand_margin/bottom = 0.0
+draw_center = true
+
+[sub_resource type="StyleBoxTexture" id=16]
+
+content_margin/left = 0.0
+content_margin/right = 0.0
+content_margin/top = 0.0
+content_margin/bottom = 0.0
+texture = ExtResource( 11 )
+margin/left = 8.0
+margin/right = 8.0
+margin/top = 8.0
+margin/bottom = 8.0
+expand_margin/left = 0.0
+expand_margin/right = 0.0
+expand_margin/top = 0.0
+expand_margin/bottom = 0.0
+draw_center = true
+
+[sub_resource type="DynamicFont" id=17]
+
+font/size = 16
+font/use_mipmaps = false
+font/use_filter = false
+font/font = ExtResource( 15 )
+
+[sub_resource type="StyleBoxTexture" id=18]
+
+content_margin/left = 4.0
+content_margin/right = 4.0
+content_margin/top = 4.0
+content_margin/bottom = 4.0
+texture = ExtResource( 18 )
+margin/left = 8.0
+margin/right = 8.0
+margin/top = 24.0
+margin/bottom = 8.0
+expand_margin/left = 0.0
+expand_margin/right = 0.0
+expand_margin/top = 23.0
+expand_margin/bottom = 0.0
+draw_center = true
+
+[sub_resource type="DynamicFont" id=19]
+
+font/size = 8
+font/use_mipmaps = false
+font/use_filter = false
+font/font = ExtResource( 15 )
+
+[resource]
+
+default_font = SubResource( 19 )
+Button/styles/disabled = SubResource( 1 )
+Button/styles/focus = SubResource( 2 )
+Button/styles/hover = ExtResource( 2 )
+Button/styles/normal = ExtResource( 3 )
+Button/styles/pressed = ExtResource( 4 )
+CheckBox/icons/checked = ExtResource( 5 )
+CheckBox/icons/unchecked = ExtResource( 6 )
+HButtonArray/colors/font_color = Color( 0.654902, 0.431373, 0.0823529, 1 )
+HButtonArray/styles/focus = SubResource( 3 )
+HButtonArray/styles/hover = ExtResource( 2 )
+HButtonArray/styles/normal = ExtResource( 3 )
+HButtonArray/styles/selected = ExtResource( 4 )
+LineEdit/styles/normal = SubResource( 4 )
+MenuButton/styles/focus = SubResource( 5 )
+MenuButton/styles/hover = ExtResource( 2 )
+MenuButton/styles/normal = ExtResource( 3 )
+MenuButton/styles/pressed = ExtResource( 4 )
+OptionButton/styles/focus = SubResource( 6 )
+OptionButton/styles/hover = ExtResource( 2 )
+OptionButton/styles/normal = ExtResource( 3 )
+OptionButton/styles/pressed = ExtResource( 4 )
+Panel/styles/panel = SubResource( 7 )
+PanelContainer/styles/panel = SubResource( 8 )
+PopupMenu/styles/hover = SubResource( 9 )
+PopupMenu/styles/panel = SubResource( 10 )
+PopupPanel/styles/panel = ExtResource( 10 )
+ProgressBar/styles/bg = SubResource( 11 )
+ProgressBar/styles/fg = SubResource( 12 )
+SpinBox/icons/updown = ExtResource( 13 )
+TabContainer/styles/panel = ExtResource( 14 )
+TabContainer/styles/tab_bg = ExtResource( 3 )
+TabContainer/styles/tab_fg = ExtResource( 4 )
+VButtonArray/colors/font_color = Color( 0.65625, 0.432947, 0.0845947, 1 )
+VButtonArray/styles/focus = SubResource( 13 )
+VButtonArray/styles/hover = ExtResource( 2 )
+VButtonArray/styles/normal = ExtResource( 3 )
+VButtonArray/styles/selected = ExtResource( 4 )
+VScrollBar/styles/grabber = SubResource( 14 )
+VScrollBar/styles/grabber_hilite = SubResource( 15 )
+VScrollBar/styles/scroll = SubResource( 16 )
+WindowDialog/colors/title_color = Color( 1, 1, 1, 1 )
+WindowDialog/constants/close_h_ofs = 22
+WindowDialog/constants/close_v_ofs = 20
+WindowDialog/constants/title_height = 20
+WindowDialog/constants/titlebar_height = 18
+WindowDialog/fonts/title_font = SubResource( 17 )
+WindowDialog/icons/close = ExtResource( 16 )
+WindowDialog/icons/close_hilite = ExtResource( 17 )
+WindowDialog/styles/panel = SubResource( 18 )
+

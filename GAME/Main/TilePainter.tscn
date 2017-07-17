@@ -1,0 +1,97 @@
+[gd_scene load_steps=3 format=1]
+
+[ext_resource path="res://themes/Vert.tres" type="Theme" id=1]
+[ext_resource path="res://Main/TilePainter.gd" type="Script" id=2]
+
+[node name="TilePainter" type="PanelContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+theme/theme = ExtResource( 1 )
+margin/left = 4.0
+margin/top = 8.0
+margin/right = 117.0
+margin/bottom = 168.0
+script/script = ExtResource( 2 )
+
+[node name="box" type="VBoxContainer" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 4.0
+margin/top = 4.0
+margin/right = 109.0
+margin/bottom = 156.0
+alignment = 0
+
+[node name="scroll" type="ScrollContainer" parent="box"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 3
+size_flags/vertical = 3
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 105.0
+margin/bottom = 132.0
+scroll/horizontal = false
+scroll/vertical = true
+
+[node name="buttons" type="VButtonArray" parent="box/scroll"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 1
+size_flags/vertical = 3
+margin/left = 29.0
+margin/top = 0.0
+margin/right = 76.0
+margin/bottom = 132.0
+flat = false
+button/count = 4
+button/min_button_size = -1.0
+button/align = 0
+button/0/text = "[-1] Air"
+button/0/tooltip = ""
+button/0/icon = null
+button/1/text = "[0] Dirt"
+button/1/tooltip = ""
+button/1/icon = null
+button/2/text = "[1] Grass"
+button/2/tooltip = ""
+button/2/icon = null
+button/3/text = "[2] Stone"
+button/3/tooltip = ""
+button/3/icon = null
+button/selected = 0
+
+[node name="Modes" type="HButtonArray" parent="box"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 136.0
+margin/right = 105.0
+margin/bottom = 152.0
+flat = false
+button/count = 3
+button/min_button_size = -1.0
+button/align = 0
+button/0/text = "FILL"
+button/0/tooltip = ""
+button/0/icon = null
+button/1/text = "WALL"
+button/1/tooltip = ""
+button/1/icon = null
+button/2/text = "FLOOR"
+button/2/tooltip = ""
+button/2/icon = null
+button/selected = 0
+
+

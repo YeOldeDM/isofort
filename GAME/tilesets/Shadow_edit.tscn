@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=1]
+
+[ext_resource path="res://assets/graphics/tile/shade.png" type="Texture" id=1]
+
+[node name="Floors" type="Node"]
+
+[node name="Floor" type="Sprite" parent="."]
+
+texture = ExtResource( 1 )
+offset = Vector2( 0, -2 )
+region = true
+region_rect = Rect2( 4, 0, 24, 22 )
+
+[node name="Wall" type="Sprite" parent="."]
+
+texture = ExtResource( 1 )
+offset = Vector2( 0, -5 )
+region = true
+region_rect = Rect2( 4, 23, 24, 24 )
+
+

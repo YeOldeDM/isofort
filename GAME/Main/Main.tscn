@@ -1,0 +1,50 @@
+[gd_scene load_steps=4 format=1]
+
+[ext_resource path="res://themes/Vert.tres" type="Theme" id=1]
+[ext_resource path="res://Main/Main.gd" type="Script" id=2]
+[ext_resource path="res://assets/graphics/bg_grad.png" type="Texture" id=3]
+
+[node name="Main" type="Control"]
+
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+theme/theme = ExtResource( 1 )
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 0.0
+margin/bottom = 0.0
+script/script = ExtResource( 2 )
+title_scene = "res://Title/Title.tscn"
+newgame_scene = "res://World/WorldCreationWindow.tscn"
+loadgame_scene = "res://Title/WorldSelect.tscn"
+world_scene = "res://World/World.tscn"
+
+[node name="BG" type="CanvasLayer" parent="."]
+
+layer = -1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+
+[node name="TextureFrame" type="TextureFrame" parent="BG"]
+
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 0.0
+margin/bottom = 0.0
+texture = ExtResource( 3 )
+modulate = Color( 0.398254, 0.538781, 0.703125, 1 )
+expand = true
+stretch_mode = 0
+
+

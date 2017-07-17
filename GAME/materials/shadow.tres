@@ -1,0 +1,21 @@
+[gd_resource type="CanvasItemMaterial" load_steps=2 format=1]
+
+[sub_resource type="CanvasItemShader" id=1]
+
+_code = {
+"fragment": "
+uniform color modulate=color(0.2,0.4,1.0,0.8);
+COLOR = vec4(modulate.rgb,tex(TEXTURE,UV).a*modulate.a);",
+"fragment_ofs": 0,
+"light": "",
+"light_ofs": 0,
+"vertex": "",
+"vertex_ofs": 0
+}
+
+[resource]
+
+shader/shader = SubResource( 1 )
+shader/shading_mode = 0
+shader_param/modulate = Color( 0.2, 0.4, 1, 0.863373 )
+
