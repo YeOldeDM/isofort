@@ -33,6 +33,8 @@ func pre_exit():
 		yield(Data, "world_saved")
 	call_deferred("emit_signal","saved_world")
 	print("SAVED")
+	
+	BOOT.usr_cfg.set_value("meta", "version", BOOT.VERSION)
 
 func _notification( what ):
 	if what == MainLoop.NOTIFICATION_WM_QUIT_REQUEST:

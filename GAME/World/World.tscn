@@ -222,7 +222,6 @@ script/script = ExtResource( 6 )
 
 [node name="HUD" type="CanvasLayer" parent="."]
 
-editor/display_folded = true
 layer = 1
 offset = Vector2( 0, 0 )
 rotation = 0.0
@@ -244,17 +243,25 @@ margin/bottom = 0.0
 
 [node name="LevelControl" parent="HUD/WorldSpace" instance=ExtResource( 8 )]
 
-margin/left = 386.0
-margin/top = 295.0
-margin/right = 500.0
-margin/bottom = 336.0
+anchor/left = 1
+anchor/top = 1
+anchor/right = 1
+anchor/bottom = 1
+margin/left = 126.0
+margin/top = 55.0
+margin/right = 12.0
+margin/bottom = 14.0
 
 [node name="TilePainter" parent="HUD/WorldSpace" instance=ExtResource( 9 )]
 
-margin/left = 386.0
-margin/top = 110.0
-margin/right = 501.0
-margin/bottom = 289.0
+anchor/left = 1
+anchor/top = 1
+anchor/right = 1
+anchor/bottom = 1
+margin/left = 126.0
+margin/top = 240.0
+margin/right = 11.0
+margin/bottom = 61.0
 
 [node name="TileInfo" parent="HUD/WorldSpace" instance=ExtResource( 10 )]
 

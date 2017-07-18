@@ -1,12 +1,25 @@
 extends Node
 
+var VERSION = {
+	"major":	0,
+	"minor":	0,
+	"baby":		1,
+	}
+
 const USER_CFG_PATH = "user://user.cfg"
 
 onready var usr_cfg = ConfigFile.new()
 
+func update_usr_cfg():
+	assert usr_cfg.has_section("meta")
+	if !usr.cfg.has_section_key("meta","epoch"):
+		usr_cfg.set_value( "meta", "epoch", OS.get_unix_time() )
+	usr_cfg.set_value("meta", "version", BOOT.VERSION)
+	usr_cfg.save(USER_CFG_PATH)
+
 func set_last_world_opened( name ):
 	usr_cfg.set_value( "last_session", "world_opened", name )
-	usr_cfg.save( USER_CFG_PATH )
+	update_usr_cfg()
 
 func get_last_world_opened():
 	if usr_cfg.has_section_key("last_session", "world_opened"):
@@ -31,7 +44,7 @@ func _ready():
 		var F = File.new()
 		if !F.file_exists( USER_CFG_PATH ):
 			# Make a new user.cfg
-			usr_cfg.set_value( "meta", "epoch", OS.get_unix_time() )
-			usr_cfg.save( USER_CFG_PATH )
+			
+			update_usr_cfg()
 			print( "NEW USER CFG CREATED" )
 	
